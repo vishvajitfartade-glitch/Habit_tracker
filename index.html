@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StreakTrack - Daily Streak Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <div>
+                <h1>🔥 StreakTrack</h1>
+                <p>Build habits. Track progress. Keep your streak alive.</p>
+            </div>
+
+            <div class="today">
+                <span>Today</span>
+                <strong id="todayDate"></strong>
+            </div>
+        </header>
+
+        <!-- Main Dashboard -->
+        <main>
+
+            <!-- Current Streak -->
+            <section class="hero-card">
+                <div class="fire">🔥</div>
+
+                <div>
+                    <p class="label">CURRENT STREAK</p>
+                    <h2><span id="currentStreak">0</span> Days</h2>
+                    <p id="streakMessage">
+                        Start your streak today!
+                    </p>
+                </div>
+            </section>
+
+            <!-- Statistics -->
+            <section class="stats">
+
+                <div class="stat-card">
+                    <span>📅</span>
+                    <p>Total Days</p>
+                    <h3 id="totalDays">0</h3>
+                </div>
+
+                <div class="stat-card">
+                    <span>✅</span>
+                    <p>Completed</p>
+                    <h3 id="completedDays">0</h3>
+                </div>
+
+                <div class="stat-card">
+                    <span>🏆</span>
+                    <p>Best Streak</p>
+                    <h3 id="bestStreak">0</h3>
+                </div>
+
+            </section>
+
+            <!-- Daily Goal -->
+            <section class="goal-card">
+
+                <div class="section-title">
+                    <div>
+                        <h2>Today's Goal</h2>
+                        <p>Complete your daily task to continue your streak.</p>
+                    </div>
+
+                    <span id="goalStatus">Not completed</span>
+                </div>
+
+                <button id="completeBtn" onclick="toggleToday()">
+                    ✓ Complete Today
+                </button>
+
+            </section>
+
+            <!-- Calendar -->
+            <section class="calendar-card">
+
+                <div class="calendar-header">
+                    <button onclick="previousMonth()">‹</button>
+
+                    <h2 id="monthTitle"></h2>
+
+                    <button onclick="nextMonth()">›</button>
+                </div>
+
+                <div class="weekdays">
+                    <span>Sun</span>
+                    <span>Mon</span>
+                    <span>Tue</span>
+                    <span>Wed</span>
+                    <span>Thu</span>
+                    <span>Fri</span>
+                    <span>Sat</span>
+                </div>
+
+                <div id="calendar" class="calendar"></div>
+
+                <div class="legend">
+                    <span>
+                        <i class="completed-dot"></i>
+                        Completed
+                    </span>
+
+                    <span>
+                        <i class="today-dot"></i>
+                        Today
+                    </span>
+                </div>
+
+            </section>
+
+            <!-- History -->
+            <section class="history-card">
+
+                <div class="section-title">
+                    <div>
+                        <h2>Recent Activity</h2>
+                        <p>Your latest completed days.</p>
+                    </div>
+                </div>
+
+                <div id="history"></div>
+
+            </section>
+
+        </main>
+
+        <footer>
+            <p>StreakTrack © 2026 | Built with HTML, CSS & JavaScript</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
